@@ -1,0 +1,16 @@
+@import url("../block/__string/block__string.css");
+@import url("../block/__name/block__name.css");
+@import url("../block/__title/block__title.css");
+@import url("../block/__link/block__link.css");
+@import url("../block/__info/block__info.css");
+@import url("../block/__paragraph/block__paragraph.css");
+@import url("../block/__table/block__table.css");
+@import url("../block/__cell/block__cell.css");
+.block {
+  background: #f5f2f0;
+  border-radius: 5px;
+  padding: 10px;
+  width: 400px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}

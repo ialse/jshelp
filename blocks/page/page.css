@@ -6,6 +6,15 @@
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
-  max-width: 882px;
+  max-width: 1250px;
   margin: auto;
+}
+
+.embedFooter {
+  display: none;
+}
+
+.javascript {
+  /*list-style-type: none;*/
+  padding: 0 0 0 25px;
 }

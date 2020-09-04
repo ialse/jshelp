@@ -1,0 +1,8 @@
+@import url("../table/__cell/table__cell.css");
+@import url("../table/__accent/table__accent.css");
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #ccc;
+}

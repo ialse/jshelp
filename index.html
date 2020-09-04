@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!DOCblock html>
 <html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./pages/index.css">
-    <title>Место</title>
+    <title>Шпаргалка Javascript на одной странице</title>
 </head>
 
 <body class="body">
@@ -16,13 +16,109 @@
     </header>
 
     <main class="content">
-        <section class="profile">
+        <section class="block">
+            <h2 class="block__title">Типы данных</h2>
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td class="table__cell"><span class="table__accent">number</span></td>
+                        <td class="table__cell table__cell_right">целое число или с точкой, а также NaN и Infinity</td>
+                    </tr>
+                    <tr>
+                        <td class="table__cell"><span class="table__accent">bigint</span></td>
+                        <td class="table__cell table__cell_right">большие числа > 2 в 53</td>
+                    </tr>
+                    <tr>
+                        <td class="table__cell"><span class="table__accent">string</span></td>
+                        <td class="table__cell table__cell_right">строка</td>
+                    </tr>
+                    <tr>
+                        <td class="table__cell"><span class="table__accent">boolean</span></td>
+                        <td class="table__cell table__cell_right">булево: true или false</td>
+                    </tr>
+                    <tr>
+                        <td class="table__cell"><span class="table__accent">null</span></td>
+                        <td class="table__cell table__cell_right">для неизвестных значений</td>
+                    </tr>
+                    <tr>
+                        <td class="table__cell"><span class="table__accent">undefined</span></td>
+                        <td class="table__cell table__cell_right">для неприсвоенных значений</td>
+                    </tr>
+                    <tr>
+                        <td class="table__cell"><span class="table__accent">object</span></td>
+                        <td class="table__cell table__cell_right">для сложных структур данных</td>
+                    </tr>
+                    <tr>
+                        <td class="table__cell"><span class="table__accent">symbol</span></td>
+                        <td class="table__cell table__cell_right">для уникальных идентификаторов</td>
+                    </tr>
+                </tbody>
+            </table>
 
+            <p class="block__paragraph">Оператор <span class="block__name">typeof</span> позволяет увидеть, какой тип данных сохранён в переменной.</p>
+            <a href="https://learn.javascript.ru/types" class="block__link" target="blank">Подробнее</a>
         </section>
 
-        <section class="elements">
-
+        <section class="block">
+            <h2 class="block__title">Операторы</h2>
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td class="table__cell"><span class="table__accent">+</span></td>
+                        <td class="table__cell table__cell_right">сложение, действует и для строк</td>
+                    </tr>
+                    <tr>
+                        <td class="table__cell"><span class="table__accent">-</span></td>
+                        <td class="table__cell table__cell_right">вычитание</td>
+                    </tr>
+                    <tr>
+                        <td class="table__cell"><span class="table__accent">*</span></td>
+                        <td class="table__cell table__cell_right">умножение</td>
+                    </tr>
+                    <tr>
+                        <td class="table__cell"><span class="table__accent">/</span></td>
+                        <td class="table__cell table__cell_right">деление</td>
+                    </tr>
+                    <tr>
+                        <td class="table__cell"><span class="table__accent">=</span></td>
+                        <td class="table__cell table__cell_right">присваивание</td>
+                    </tr>
+                    <tr>
+                        <td class="table__cell"><span class="table__accent">++</span></td>
+                        <td class="table__cell table__cell_right">инкремент, i++ то же, что i=i+1</td>
+                    </tr>
+                    <tr>
+                        <td class="table__cell"><span class="table__accent">--</span></td>
+                        <td class="table__cell table__cell_right">декремент, i-- то же, что i=i-1</td>
+                    </tr>
+                    <tr>
+                        <td class="table__cell"><span class="table__accent">%</span></td>
+                        <td class="table__cell table__cell_right">остаток от деления</td>
+                    </tr>
+                    <tr>
+                        <td class="table__cell"><span class="table__accent">**</span></td>
+                        <td class="table__cell table__cell_right">возведение в степень</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="https://learn.javascript.ru/operators" class="block__link" target="blank">Подробнее</a>
         </section>
+
+        <section class="block">
+            <h2 class="block__title">Условные операторы: if, '?'</h2>
+            <div class="block__info">
+                <p class="block__paragraph">Оператор if(...) вычисляет условие в скобках и, если результат true, то выполняет блок кода.</p>
+                <p class="block__paragraph">Может содержать необязательный блок «else» («иначе»). Выполняется, когда условие ложно.</p>
+                <p class="block__paragraph">Иногда, нужно проверить несколько вариантов условия. Для этого используется блок else if.</p>
+                <p class="block__code">
+                    <script src="https://pastebin.com/embed_js/4BBZa058"></script>
+                </p>
+            </div>
+            <a href="https://learn.javascript.ru/ifelse" class="block__link" target="blank">Подробнее</a>
+        </section>
+
+
+
     </main>
 
 </div>
