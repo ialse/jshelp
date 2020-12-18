@@ -1,363 +1,556 @@
 <!DOCblock html>
-<html lang="ru">
+    <html lang="ru">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./pages/index.css">
-    <title>Шпаргалка Javascript на одной странице</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./pages/index.css">
+        <title>Шпаргалка Javascript на одной странице</title>
+    </head>
 
-<body class="body">
-</body>
-<div class="page">
-    <header class="header">
-        <h1 class="header__title">Шпаргалка Javascript на одной странице</h1>
-    </header>
+    <body class="body">
+    </body>
+    <div class="page">
+        <header class="header">
+            <h1 class="header__title">Шпаргалка Javascript на одной странице</h1>
+        </header>
 
-    <main class="content">
-        <section class="block">
-            <h2 class="block__title">Типы данных</h2>
-            <table class="table">
-                <tbody>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">number</span></td>
-                        <td class="table__cell table__cell_right">целое число или с точкой, а также NaN и Infinity</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">bigint</span></td>
-                        <td class="table__cell table__cell_right">большие числа > 2 в 53</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">string</span></td>
-                        <td class="table__cell table__cell_right">строка</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">boolean</span></td>
-                        <td class="table__cell table__cell_right">булево: true или false</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">null</span></td>
-                        <td class="table__cell table__cell_right">для неизвестных значений</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">undefined</span></td>
-                        <td class="table__cell table__cell_right">для неприсвоенных значений</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">object</span></td>
-                        <td class="table__cell table__cell_right">для сложных структур данных</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">symbol</span></td>
-                        <td class="table__cell table__cell_right">для уникальных идентификаторов</td>
-                    </tr>
-                </tbody>
-            </table>
+        <main class="content">
 
-            <p class="block__paragraph">Оператор <span class="block__name">typeof</span> позволяет увидеть, какой тип данных сохранён в переменной.</p>
-            <a href="https://learn.javascript.ru/types" class="block__link" target="blank">Подробнее</a>
-        </section>
+            <section class="block block_size_big">
+                <h2 class="block__title">Команды Webpack</h2>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">npm init --yes</span>
+                            </td>
+                            <td class="table__cell table__cell_right">Инициализация проекта. Создание файла package.json
+                                с ответами Да на все вопросы</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">npm i webpack --save-dev</span></td>
+                            <td class="table__cell table__cell_right">Установка Webpack, --save-dev - флаг, что данный
+                                модуль нужен только в процессе разработки и не нужен в финальной сборке</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">npm i webpack-cli --save-dev</span></td>
+                            <td class="table__cell table__cell_right">Интерфейс командной строки для Вебпака</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell table__cell_left"><span class="table__accent">npm i
+                                    webpack-dev-server
+                                    --save-dev</span></td>
+                            <td class="table__cell table__cell_right">Локальный сервер для вебпака. Работает на
+                                localhost:8080</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">npm i @babel/core --save-dev</span></td>
+                            <td class="table__cell table__cell_right">Бабель - транспилирует JS код ES6 в старый,
+                                поддерживаемый старыми браузерами</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent"> npm i @babel/preset-env
+                                    --save-dev</span></td>
+                            <td class="table__cell table__cell_right">Пресет (правила) для бабеля, по которому он будет
+                                транспилировать новый код в старый. Есть и другие. Позволяет указать, в каких версиях
+                                браузеров должен работать итоговый код. Данный самый распространенный</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">npm i core-js --save</span></td>
+                            <td class="table__cell table__cell_right">core-js - полифилы распространенных методов для
+                                совсем старых браузеров. Необходим для случаев, когда даже транспиляция не помогает</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">npm i babel-loader --save-dev</span>
+                            </td>
+                            <td class="table__cell table__cell_right">Пакет, который позволяет подключить бабель к
+                                «Вебпаку»</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell table__cell_left"><span class="table__accent">npm i
+                                    html-webpack-plugin
+                                    --save-dev</span>
+                            </td>
+                            <td class="table__cell table__cell_right">Плагин для добавления HTML файлов в сборку</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell table__cell_left"><span class="table__accent">npm i
+                                    clean-webpack-plugin --save-dev</span>
+                            </td>
+                            <td class="table__cell table__cell_right">Плагин, удаляет содержимое папки dist перед
+                                сборкой</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell table__cell_left"><span class="table__accent">npm i css-loader
+                                    --save-dev</span>
+                            </td>
+                            <td class="table__cell table__cell_right">Нужен для того, чтобы научить «Вебпак» работать с
+                                файлами CSS</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell table__cell_left"><span class="table__accent">npm i
+                                    mini-css-extract-plugin --save-dev </span>
+                            </td>
+                            <td class="table__cell table__cell_right">Плагин. Берёт много css-файлов и объединяет их в
+                                один.</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell table__cell_left"><span class="table__accent">npm i postcss-loader
+                                    --save-dev</span>
+                            </td>
+                            <td class="table__cell table__cell_right">Препроцессор для обработки CSS</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell table__cell_left"><span class="table__accent">npm i autoprefixer
+                                    --save-dev</span>
+                            </td>
+                            <td class="table__cell table__cell_right">Плагин для PostCSS. Проставляет или удаляет
+                                браузерные префиксы</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell table__cell_left"><span class="table__accent">npm i cssnano
+                                    --save-dev</span>
+                            </td>
+                            <td class="table__cell table__cell_right">Плагин для PostCSS. Минифицирует CSS код, удаляя
+                                пробелы, комменты и прочее</td>
+                        </tr>
 
-        <section class="block">
-            <h2 class="block__title">Операторы</h2>
-            <table class="table">
-                <tbody>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">+</span></td>
-                        <td class="table__cell table__cell_right">сложение, действует и для строк</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">-</span></td>
-                        <td class="table__cell table__cell_right">вычитание</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">*</span></td>
-                        <td class="table__cell table__cell_right">умножение</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">/</span></td>
-                        <td class="table__cell table__cell_right">деление</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">=</span></td>
-                        <td class="table__cell table__cell_right">присваивание</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">++</span></td>
-                        <td class="table__cell table__cell_right">инкремент, i++ то же, что i=i+1</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">--</span></td>
-                        <td class="table__cell table__cell_right">декремент, i-- то же, что i=i-1</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">%</span></td>
-                        <td class="table__cell table__cell_right">остаток от деления</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">**</span></td>
-                        <td class="table__cell table__cell_right">возведение в степень</td>
-                    </tr>
-                </tbody>
-            </table>
-            <a href="https://learn.javascript.ru/operators" class="block__link" target="blank">Подробнее</a>
-        </section>
+                    </tbody>
+                </table>
+                <a href="#" class="block__link" target="blank">Подробнее</a>
+            </section>
 
-        <section class="block">
-            <h2 class="block__title">Условный оператор if</h2>
-            <div class="block__info">
-                <p class="block__paragraph">Оператор if(...) вычисляет условие в скобках и, если результат true, то выполняет блок кода.</p>
-                <p class="block__paragraph">Может содержать необязательный блок «else» («иначе»). Выполняется, когда условие ложно.</p>
-                <p class="block__paragraph">Иногда, нужно проверить несколько вариантов условия. Для этого используется блок else if.</p>
-                <p class="block__code">
-                    <script src="https://pastebin.com/embed_js/4BBZa058"></script>
-                </p>
-            </div>
-            <a href="https://learn.javascript.ru/ifelse" class="block__link" target="blank">Подробнее</a>
-        </section>
+            <section class="block block_size_big">
+                <h2 class="block__title">Команды React</h2>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">npm install -g create-react-app</span>
+                            </td>
+                            <td class="table__cell table__cell_right">Установка Create React App</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">npm init react-app
+                                    название_проекта</span></td>
+                            <td class="table__cell table__cell_right">Создание нового CRA-проекта</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">npm i -g serve </span></td>
+                            <td class="table__cell table__cell_right">Установка локального сервера</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">serve -s build</span></td>
+                            <td class="table__cell table__cell_right">Запуск локального сервера. По умолчанию адрес
+                                localhost:5000</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="https://create-react-app.dev/docs/getting-started/" class="block__link"
+                    target="blank">Подробнее</a>
+            </section>
 
-        <section class="block">
-            <h2 class="block__title">Условный оператор '?'</h2>
-            <div class="block__info">
-                <p class="block__paragraph">Работает аналогично if...else, но используют, чтобы присвоить переменной то или иное значение в зависимости от условия.</p>
-                <p class="block__paragraph">Не рекомендуется заменять конструкции if...else, где используются сложные действия.</p>
-                <p class="block__code">
-                    <script src="https://pastebin.com/embed_js/4tCWJu0F"></script>
-                </p>
-            </div>
-            <a href="https://learn.javascript.ru/ifelse#uslovnyy-operator" class="block__link" target="blank">Подробнее</a>
-        </section>
-
-        <section class="block">
-            <h2 class="block__title">Конструкция "switch"</h2>
-            <div class="block__info">
-                <p class="block__paragraph">Конструкция switch заменяет собой сразу несколько if. Она представляет собой более наглядный способ сравнить выражение сразу с несколькими вариантами.</p>
-                <p class="block__code">
-                    <script src="https://pastebin.com/embed_js/uvphAqYQ"></script>
-                </p>
-            </div>
-            <a href="https://learn.javascript.ru/switch" class="block__link" target="blank">Подробнее</a>
-        </section>
-
-        <section class="block">
-            <h2 class="block__title">Функции</h2>
-            <div class="block__info">
-                <p class="block__paragraph">Используются, чтобы не повторять один и тот же код во многих местах. Являются основными «строительными блоками» программы.</p>
-                <p class="block__paragraph"></p>
-                <p class="block__code">
-                </p>
-            </div>
-            <a href="https://learn.javascript.ru/function-basics" class="block__link" target="blank">Подробнее</a>
-        </section>
-
-        <section class="block block_size_middle">
-            <h2 class="block__title">Методы для чисел</h2>
-            <table class="table">
-                <tbody>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">Math.floor()</span></td>
-                        <td class="table__cell table__cell_right">Округление в меньшую сторону</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">Math.ceil()</span></td>
-                        <td class="table__cell table__cell_right">Округление в большую сторону</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">Math.round()</span></td>
-                        <td class="table__cell table__cell_right">Округление до ближайшего целого</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">Math.trunc()</span></td>
-                        <td class="table__cell table__cell_right">Удаление дробной части без округления</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">parseInt()</span></td>
-                        <td class="table__cell table__cell_right">Ищет первое целое число в строке</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">parseFloat()</span></td>
-                        <td class="table__cell table__cell_right">Ищет первое дробное число в строке</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">Math.random()</span></td>
-                        <td class="table__cell table__cell_right">Возвращает псевдослучайное число от 0 до 1</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">Math.max(a, b, c...)</span></td>
-                        <td class="table__cell table__cell_right">Возвращает наибольшее</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">Math.min(a, b, c...)</span></td>
-                        <td class="table__cell table__cell_right">Возвращает наименьшее</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">Math.pow(n, power)</span></td>
-                        <td class="table__cell table__cell_right">Возводит n в степень power</td>
-                    </tr>
-                </tbody>
-            </table>
-            <a href="https://learn.javascript.ru/number" class="block__link" target="blank">Подробнее</a>
-        </section>
-
-        <section class="block block_size_middle">
-            <h2 class="block__title">Методы для строк</h2>
-            <table class="table">
-                <tbody>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">.length</span></td>
-                        <td class="table__cell table__cell_right">Длина строки (это свойство, не метод)</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">.toLowerCase()</span></td>
-                        <td class="table__cell table__cell_right">Меняет регистр на нижний</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">.toUpperCase() </span></td>
-                        <td class="table__cell table__cell_right">Меняет регистр на верхний</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">.indexOf(substr, pos)</span></td>
-                        <td class="table__cell table__cell_right">Поиск подстроки</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">.lastIndexOf(substr, pos)</span></td>
-                        <td class="table__cell table__cell_right">Поиск подстроки. Ищет с конца</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">.includes(substr, pos)</span></td>
-                        <td class="table__cell table__cell_right">Поиск подстроки</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">.startsWith()</span></td>
-                        <td class="table__cell table__cell_right">Начинается ли строка с </td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">.endsWith()</span></td>
-                        <td class="table__cell table__cell_right">Кончается ли строка на</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">.slice(start, end)</span></td>
-                        <td class="table__cell table__cell_right">Часть строки от start до (не включая) end</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">.substring(start, end)</span></td>
-                        <td class="table__cell table__cell_right">Часть строки между start и end</td>
-                    </tr>
-                </tbody>
-            </table>
-            <a href="https://learn.javascript.ru/string" class="block__link" target="blank">Подробнее</a>
-        </section>
-
-        <section class="block block_size_big">
-            <h2 class="block__title">Методы для массивов</h2>
-            <table class="table">
-                <tbody>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">.length</span></td>
-                        <td class="table__cell table__cell_right">Длина массива (это свойство, не метод)</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">.pop()</span></td>
-                        <td class="table__cell table__cell_right">Извлекает элемент с конца</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">.push (...items)</span></td>
-                        <td class="table__cell table__cell_right">Добавляет элементы в конец</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">.shift()</span></td>
-                        <td class="table__cell table__cell_right">Извлекает элемент с начала</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">.unshift(...items)</span></td>
-                        <td class="table__cell table__cell_right">Добавляет элементы в начало</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">.slice(start, end)</span></td>
-                        <td class="table__cell table__cell_right">Возвращает новый массив, в который копирует элементы, начиная с индекса start и до end (не включая)</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">.splice(pos, deleteCount, ...items)</span></td>
-                        <td class="table__cell table__cell_right">Начиная с индекса pos, удаляет deleteCount элементов и вставляет items</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">.concat()</span></td>
-                        <td class="table__cell table__cell_right">Создаёт новый массив, в который копирует данные из других массивов</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">.indexOf(item, pos)</span></td>
-                        <td class="table__cell table__cell_right">Ищет item, начиная с позиции pos, и возвращает его индекс или -1, если ничего не найдено</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">.lastIndexOf(item, pos)</span></td>
-                        <td class="table__cell table__cell_right">Ищет item, начиная с позиции pos, и возвращает его индекс или -1, если ничего не найдено. Ищет с конца</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">.includes(value)</span></td>
-                        <td class="table__cell table__cell_right">Возвращает true, если в массиве имеется элемент value, в противном случае false</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">.filter(func)</span></td>
-                        <td class="table__cell table__cell_right">Фильтрует элементы через функцию и отдаёт массив значений, при прохождении которых через функцию возвращается true</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">.find(func)</span></td>
-                        <td class="table__cell table__cell_right">Ищет элементы через функцию и отдаёт первое значение, при прохождении которых через функцию возвращается true</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">.findIndex()</span></td>
-                        <td class="table__cell table__cell_right">Похож на find, но возвращает индекс вместо значения</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">.forEach(func)</span></td>
-                        <td class="table__cell table__cell_right">Вызывает func для каждого элемента. Ничего не возвращает</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">.map(func)</span></td>
-                        <td class="table__cell table__cell_right">Создаёт новый массив из результатов вызова func для каждого элемента</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">.sort(func)</span></td>
-                        <td class="table__cell table__cell_right">Сортирует массив «на месте», а потом возвращает его</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">.reverse()</span></td>
-                        <td class="table__cell table__cell_right">Меняет порядок следования элементов на противоположный «на месте» и возвращает изменённый массив</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">.split()</span></td>
-                        <td class="table__cell table__cell_right">Преобразует строку в массив</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">.join()</span></td>
-                        <td class="table__cell table__cell_right">Преобразует массив в строку</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">.reduce(func, initial)</span></td>
-                        <td class="table__cell table__cell_right">Вычисляет одно значение на основе всего массива, вызывая func для каждого элемента и передавая промежуточный результат между вызовами</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">Array.isArray(arr)</span></td>
-                        <td class="table__cell table__cell_right">Проверяет, является ли arr массивом</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">.every(func)</span></td>
-                        <td class="table__cell table__cell_right">Проверяет, удовлетворяют ли все элементы массива условию, заданному в передаваемой функции</td>
-                    </tr>
-                    <tr>
-                        <td class="table__cell"><span class="table__accent">.some(func)</span></td>
-                        <td class="table__cell table__cell_right">Проверяет, удовлетворяют ли хоть один элемент массива условию, заданному в передаваемой функции</td>
-                    </tr>
+            <section class="block block_size_big">
+                <h2 class="block__title">Методы для массивов</h2>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">.length</span></td>
+                            <td class="table__cell table__cell_right">Длина массива (это свойство, не метод)</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">.pop()</span></td>
+                            <td class="table__cell table__cell_right">Извлекает элемент с конца</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">.push (...items)</span></td>
+                            <td class="table__cell table__cell_right">Добавляет элементы в конец</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">.shift()</span></td>
+                            <td class="table__cell table__cell_right">Извлекает элемент с начала</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">.unshift(...items)</span></td>
+                            <td class="table__cell table__cell_right">Добавляет элементы в начало</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">.slice(start, end)</span></td>
+                            <td class="table__cell table__cell_right">Возвращает новый массив, в который копирует
+                                элементы, начиная с индекса start и до end (не включая)</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">.splice(pos, deleteCount,
+                                    ...items)</span></td>
+                            <td class="table__cell table__cell_right">Начиная с индекса pos, удаляет deleteCount
+                                элементов и вставляет items, возвращает новый массив</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">.concat(array, ...)</span></td>
+                            <td class="table__cell table__cell_right">Создаёт новый массив, в который копирует данные из
+                                других массивов</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">.indexOf(item, pos)</span></td>
+                            <td class="table__cell table__cell_right">Ищет item, начиная с позиции pos, и возвращает его
+                                индекс или -1, если ничего не найдено</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">.lastIndexOf(item, pos)</span></td>
+                            <td class="table__cell table__cell_right">Ищет item, начиная с позиции pos, и возвращает его
+                                индекс или -1, если ничего не найдено. Ищет с конца</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">.includes(value)</span></td>
+                            <td class="table__cell table__cell_right">Возвращает true, если в массиве имеется элемент
+                                value, в противном случае false</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">.filter(func)</span></td>
+                            <td class="table__cell table__cell_right">Фильтрует элементы через функцию и отдаёт массив
+                                значений, при прохождении которых через функцию возвращается true</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">.find(func)</span></td>
+                            <td class="table__cell table__cell_right">Ищет элементы через функцию и отдаёт первое
+                                значение, при прохождении которых через функцию возвращается true</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">.findIndex()</span></td>
+                            <td class="table__cell table__cell_right">Похож на find, но возвращает индекс вместо
+                                значения</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">.forEach(func)</span></td>
+                            <td class="table__cell table__cell_right">Вызывает func для каждого элемента. Ничего не
+                                возвращает</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">.map(func)</span></td>
+                            <td class="table__cell table__cell_right">Возвращает новый массив из результатов вызова func
+                                для каждого элемента</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">.sort(func)</span></td>
+                            <td class="table__cell table__cell_right">Сортирует массив «на месте», а потом возвращает
+                                его</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">.reverse()</span></td>
+                            <td class="table__cell table__cell_right">Меняет порядок следования элементов на
+                                противоположный «на месте» и возвращает изменённый массив</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">.split()</span></td>
+                            <td class="table__cell table__cell_right">Преобразует строку в массив</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">.join()</span></td>
+                            <td class="table__cell table__cell_right">Преобразует массив в строку</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">.reduce(func, initial)</span></td>
+                            <td class="table__cell table__cell_right">Вычисляет одно значение на основе всего массива,
+                                вызывая func для каждого элемента и передавая промежуточный результат между вызовами
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">Array.isArray(arr)</span></td>
+                            <td class="table__cell table__cell_right">Проверяет, является ли arr массивом</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">.every(func)</span></td>
+                            <td class="table__cell table__cell_right">Проверяет, удовлетворяют ли все элементы массива
+                                условию, заданному в передаваемой функции, возвращает true или false</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">.some(func)</span></td>
+                            <td class="table__cell table__cell_right">Проверяет, удовлетворяют ли хоть один элемент
+                                массива условию, заданному в передаваемой функции, возвращает true или false</td>
+                        </tr>
 
 
-                </tbody>
-            </table>
-            <a href="https://learn.javascript.ru/array-methods" class="block__link" target="blank">Подробнее</a>
-        </section>
+                    </tbody>
+                </table>
+                <a href="https://learn.javascript.ru/array-methods" class="block__link" target="blank">Подробнее</a>
+            </section>
 
-    </main>
+            <section class="block block_size_big">
+                <h2 class="block__title">MongoDB</h2>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">mongod</span></td>
+                            <td class="table__cell table__cell_right">Команда в GitBash - запускает сервер MongoDB</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">npm i mongoose </span></td>
+                            <td class="table__cell table__cell_right">Установка пакета Mongoose для связи JS и базы
+                                MongoDB</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">const mongoose =
+                                    require('mongoose');</span></td>
+                            <td class="table__cell table__cell_right">Импорт Mongoose</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">mongoose.connect('URL', objProp)</span>
+                            </td>
+                            <td class="table__cell table__cell_right">Подключаемся к серверу mongo</td>
+                        </tr>
 
-</div>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">parseInt()</span></td>
+                            <td class="table__cell table__cell_right">Ищет первое целое число в строке</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="#" class="block__link" target="blank">Подробнее</a>
+            </section>
 
-</html>
+            <section class="block block_size_middle">
+                <h2 class="block__title">Методы для чисел</h2>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">Math.floor()</span></td>
+                            <td class="table__cell table__cell_right">Округление в меньшую сторону</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">Math.ceil()</span></td>
+                            <td class="table__cell table__cell_right">Округление в большую сторону</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">Math.round()</span></td>
+                            <td class="table__cell table__cell_right">Округление до ближайшего целого</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">Math.trunc()</span></td>
+                            <td class="table__cell table__cell_right">Удаление дробной части без округления</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">parseInt()</span></td>
+                            <td class="table__cell table__cell_right">Ищет первое целое число в строке</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">parseFloat()</span></td>
+                            <td class="table__cell table__cell_right">Ищет первое дробное число в строке</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">Math.random()</span></td>
+                            <td class="table__cell table__cell_right">Возвращает псевдослучайное число от 0 до 1</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">Math.max(a, b, c...)</span></td>
+                            <td class="table__cell table__cell_right">Возвращает наибольшее</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">Math.min(a, b, c...)</span></td>
+                            <td class="table__cell table__cell_right">Возвращает наименьшее</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">Math.pow(n, power)</span></td>
+                            <td class="table__cell table__cell_right">Возводит n в степень power</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="https://learn.javascript.ru/number" class="block__link" target="blank">Подробнее</a>
+            </section>
+
+            <section class="block block_size_middle">
+                <h2 class="block__title">Методы для строк</h2>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">.length</span></td>
+                            <td class="table__cell table__cell_right">Длина строки (это свойство, не метод)</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">.toLowerCase()</span></td>
+                            <td class="table__cell table__cell_right">Меняет регистр на нижний</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">.toUpperCase() </span></td>
+                            <td class="table__cell table__cell_right">Меняет регистр на верхний</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">.indexOf(substr, pos)</span></td>
+                            <td class="table__cell table__cell_right">Поиск подстроки</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">.lastIndexOf(substr, pos)</span></td>
+                            <td class="table__cell table__cell_right">Поиск подстроки. Ищет с конца</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">.includes(substr, pos)</span></td>
+                            <td class="table__cell table__cell_right">Поиск подстроки</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">.startsWith()</span></td>
+                            <td class="table__cell table__cell_right">Начинается ли строка с </td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">.endsWith()</span></td>
+                            <td class="table__cell table__cell_right">Кончается ли строка на</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">.slice(start, end)</span></td>
+                            <td class="table__cell table__cell_right">Часть строки от start до (не включая) end</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">.substring(start, end)</span></td>
+                            <td class="table__cell table__cell_right">Часть строки между start и end</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="https://learn.javascript.ru/string" class="block__link" target="blank">Подробнее</a>
+            </section>
+
+            <section class="block">
+                <h2 class="block__title">Типы данных</h2>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">number</span></td>
+                            <td class="table__cell table__cell_right">целое число или с точкой, а также NaN и Infinity
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">bigint</span></td>
+                            <td class="table__cell table__cell_right">большие числа > 2 в 53</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">string</span></td>
+                            <td class="table__cell table__cell_right">строка</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">boolean</span></td>
+                            <td class="table__cell table__cell_right">булево: true или false</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">null</span></td>
+                            <td class="table__cell table__cell_right">для неизвестных значений</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">undefined</span></td>
+                            <td class="table__cell table__cell_right">для неприсвоенных значений</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">object</span></td>
+                            <td class="table__cell table__cell_right">для сложных структур данных</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">symbol</span></td>
+                            <td class="table__cell table__cell_right">для уникальных идентификаторов</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p class="block__paragraph">Оператор <span class="block__name">typeof</span> позволяет увидеть, какой
+                    тип данных сохранён в переменной.</p>
+                <a href="https://learn.javascript.ru/types" class="block__link" target="blank">Подробнее</a>
+            </section>
+
+            <section class="block">
+                <h2 class="block__title">Операторы</h2>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">+</span></td>
+                            <td class="table__cell table__cell_right">сложение, действует и для строк</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">-</span></td>
+                            <td class="table__cell table__cell_right">вычитание</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">*</span></td>
+                            <td class="table__cell table__cell_right">умножение</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">/</span></td>
+                            <td class="table__cell table__cell_right">деление</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">=</span></td>
+                            <td class="table__cell table__cell_right">присваивание</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">++</span></td>
+                            <td class="table__cell table__cell_right">инкремент, i++ то же, что i=i+1</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">--</span></td>
+                            <td class="table__cell table__cell_right">декремент, i-- то же, что i=i-1</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">%</span></td>
+                            <td class="table__cell table__cell_right">остаток от деления</td>
+                        </tr>
+                        <tr>
+                            <td class="table__cell"><span class="table__accent">**</span></td>
+                            <td class="table__cell table__cell_right">возведение в степень</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="https://learn.javascript.ru/operators" class="block__link" target="blank">Подробнее</a>
+            </section>
+
+            <section class="block">
+                <h2 class="block__title">Условный оператор if</h2>
+                <div class="block__info">
+                    <p class="block__paragraph">Оператор if(...) вычисляет условие в скобках и, если результат true, то
+                        выполняет блок кода.</p>
+                    <p class="block__paragraph">Может содержать необязательный блок «else» («иначе»). Выполняется, когда
+                        условие ложно.</p>
+                    <p class="block__paragraph">Иногда, нужно проверить несколько вариантов условия. Для этого
+                        используется блок else if.</p>
+                    <p class="block__code">
+                        <script src="https://pastebin.com/embed_js/4BBZa058"></script>
+                    </p>
+                </div>
+                <a href="https://learn.javascript.ru/ifelse" class="block__link" target="blank">Подробнее</a>
+            </section>
+
+            <section class="block">
+                <h2 class="block__title">Условный оператор '?'</h2>
+                <div class="block__info">
+                    <p class="block__paragraph">Работает аналогично if...else, но используют, чтобы присвоить переменной
+                        то или иное значение в зависимости от условия.</p>
+                    <p class="block__paragraph">Не рекомендуется заменять конструкции if...else, где используются
+                        сложные действия.</p>
+                    <p class="block__code">
+                        <script src="https://pastebin.com/embed_js/4tCWJu0F"></script>
+                    </p>
+                </div>
+                <a href="https://learn.javascript.ru/ifelse#uslovnyy-operator" class="block__link"
+                    target="blank">Подробнее</a>
+            </section>
+
+            <section class="block">
+                <h2 class="block__title">Конструкция "switch"</h2>
+                <div class="block__info">
+                    <p class="block__paragraph">Конструкция switch заменяет собой сразу несколько if. Она представляет
+                        собой более наглядный способ сравнить выражение сразу с несколькими вариантами.</p>
+                    <p class="block__code">
+                        <script src="https://pastebin.com/embed_js/uvphAqYQ"></script>
+                    </p>
+                </div>
+                <a href="https://learn.javascript.ru/switch" class="block__link" target="blank">Подробнее</a>
+            </section>
+
+            <section class="block">
+                <h2 class="block__title">Функции</h2>
+                <div class="block__info">
+                    <p class="block__paragraph">Используются, чтобы не повторять один и тот же код во многих местах.
+                        Являются основными «строительными блоками» программы.</p>
+                    <p class="block__paragraph"></p>
+                    <p class="block__code">
+                    </p>
+                </div>
+                <a href="https://learn.javascript.ru/function-basics" class="block__link" target="blank">Подробнее</a>
+            </section>
+        </main>
+
+    </div>
+
+    </html>

@@ -19,5 +19,6 @@
 /*Импорт модификаторов*/
 
 @import url("../blocks/table/__cell/_right/table__cell_right.css");
+@import url("../blocks/table/__cell/_left/table__cell_left.css");
 @import url("../blocks/block/_size/_middle/block_size_middle.css");
 @import url("../blocks/block/_size/_big/block_size_big.css");
