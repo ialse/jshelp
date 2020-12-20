@@ -29,6 +29,16 @@
                         <td class="table__cell table__cell_right">Добавить все файлы в коммит.</td>
                     </tr>
                     <tr>
+                        <td class="table__cell"><span class="table__accent">git add -A</span>
+                        </td>
+                        <td class="table__cell table__cell_right">Добавить все файлы в коммит.</td>
+                    </tr>
+                    <tr>
+                        <td class="table__cell"><span class="table__accent">git add -all</span>
+                        </td>
+                        <td class="table__cell table__cell_right">Добавить все файлы в коммит.</td>
+                    </tr>
+                    <tr>
                         <td class="table__cell"><span class="table__accent">git commit -m "комментарий"</span></td>
                         <td class="table__cell table__cell_right">Сделать коммит</td>
                     </tr>
@@ -58,7 +68,45 @@
                         <td class="table__cell"><span class="table__accent">git branch -d Название_ветки</span></td>
                         <td class="table__cell table__cell_right">Удалить ветку. Нужно находиться в другой ветке</td>
                     </tr>
-
+                    <tr>
+                        <td class="table__cell"><span class="table__accent">git remote add origin
+                                Адрес_репозитория</span>
+                        </td>
+                        <td class="table__cell table__cell_right">Привязываем локальный репозиторий к удаленному.
+                            Удаленный должен быть создан на Гитхабе</td>
+                    </tr>
+                    <tr>
+                        <td class="table__cell"><span class="table__accent">git log
+                        </td>
+                        <td class="table__cell table__cell_right">Посмотреть подробный лог коммитов</td>
+                    </tr>
+                    <tr>
+                        <td class="table__cell"><span class="table__accent">git log --oneline</span>
+                        </td>
+                        <td class="table__cell table__cell_right">Посмотреть короткий просмотр коммитов</td>
+                    </tr>
+                    <tr>
+                        <td class="table__cell"><span class="table__accent">git diff</span>
+                        </td>
+                        <td class="table__cell table__cell_right">Посмотреть изменения в «рабочей зоне»; они маркируются
+                            гитом как modifided, new или deleted</td>
+                    </tr>
+                    <tr>
+                        <td class="table__cell"><span class="table__accent">git diff --staged</span>
+                        </td>
+                        <td class="table__cell table__cell_right">Посмотреть изменения, добавленные в staged</td>
+                    </tr>
+                    <tr>
+                        <td class="table__cell"><span class="table__accent">git diff a9928ab 11bada1</span>
+                        </td>
+                        <td class="table__cell table__cell_right">Сравнить изменения двух коммитов. a9928ab -
+                            первые 7 символов хэша </td>
+                    </tr>
+                    <tr>
+                        <td class="table__cell"><span class="table__accent">git commit --amend</span>
+                        </td>
+                        <td class="table__cell table__cell_right">Добавить изменения к последнему коммиту</td>
+                    </tr>
                 </tbody>
             </table>
             <a href="#" class="block__link" target="blank">Подробнее</a>
